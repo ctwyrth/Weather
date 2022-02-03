@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container flexcol">
+
+        <!-- Header and Navigation section of the site -->
+        <div class="header">
+            <header class="titlebar flexrow">
+                <h1 class="title">DojoWeather</h1>
+                <nav class="navbar flexrow">
+                    <a href="#burbank" id="Burbank" class="nav-item" onclick="cityAlert(this.id)">Burbank</a>
+                    <a href="#chicago" id="Chicago" class="nav-item" onclick="cityAlert(this.id)">Chicago</a>
+                    <a href="#dallas" id="Dallas" class="nav-item" onclick="cityAlert(this.id)">Dallas</a>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Main section of the page -->
+        <div class="main">
+            <div class="main-title flexrow">
+                <h2>San Jose</h2>
+                <div class="temp-change">
+                    <label for="tempScale" class="temp-scale">show temperature in </label>
+                    <select name="tempScale" id="tempScale" onchange="convertTemps(this.value)">
+                        <option value="celsius">ºC</option>
+                        <option value="fahrenheit">ºF</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Weekly forecast section of the page -->
+            <div class="week flexrow">
+                <div class="weekdays flexcol">
+                    <h3 class="day">Today</h3>
+                    <img src="img/some_rain.png" alt="icon representing a possibly rainy day" class="weather-img">
+                    <p class="weather-descript">some rain</p>
+                    <p class="temps flexrow"><span class="high">24º</span><span class="low">18º</span></p>
+                </div>
+                <div class="weekdays flexcol">
+                    <h3 class="day">Tomorrow</h3>
+                    <img src="img/some_sun.png" alt="icon representing a sunny day" class="weather-img">
+                    <p class="weather-descript">some sun</p>
+                    <p class="temps flexrow"><span class="high">27º</span><span class="low">19º</span></p>
+                </div>
+                <div class="weekdays flexcol">
+                    <h3 class="day">Friday</h3>
+                    <img src="img/some_clouds.png" alt="icon representing a cloudy day" class="weather-img">
+                    <p class="weather-descript">some clouds</p>
+                    <p class="temps flexrow"><span class="high">21º</span><span class="low">16º</span></p>
+                </div>
+                <div class="weekdays flexcol">
+                    <h3 class="day">Saturday</h3>
+                    <img src="img/some_sun.png" alt="icon representing a sunny day" class="weather-img">
+                    <p class="weather-descript">some sun</p>
+                    <p class="temps flexrow"><span class="high">26º</span><span class="low">21º</span></p>
+                </div>
+            </div>
+
+            <!-- Cookie usage alert box -->
+            <div class="cookies-alert flexrow">
+                <img src="img/cookie.png" alt="stock art icon of a cookie" class="cookies-img">
+                <div class="cookies-txt">
+                    <h4>Stop! Cookie time</h4>
+                    <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our traffic. <a href="#">Read more...</a></p>
+                </div>
+                <div class="btn-placement">
+                    <button class="cookies-accept" onclick="removeMe('cookies-alert')">I Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

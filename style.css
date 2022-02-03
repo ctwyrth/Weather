@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Primary container to establish page */
+.container {
+    width: 100%;
+}
+
+/* Title and Navigation */
+.header {
+    background-color: skyblue;
+    color: white;
+}
+
+.titlebar {
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 2.25rem;
+    margin: 8px 0;
+}
+
+.navbar {
+    width: 35%;
+}
+
+.nav-item {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.nav-item:hover {
+    top: -1px;
+    text-shadow: 3px 3px 2px black;
+}
+
+/* Main section of page */
+.main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.main-title {
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 20px 0 20px;
+}
+
+.main-title h2 {
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+/* Temperature scale select element */
+.temp-scale {
+    font-size: .85rem;
+}
+
+#tempScale {
+    margin-left: 5px;
+}
+
+/* Weekly forecast section */
+.week {
+    margin-top: 25px;
+}
+
+/* Daily forecast boxes */
+.weekdays {
+    flex: 1;
+    background-color: rgb(230, 230, 230);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2.5%;
+    padding: 1.75%;
+    border: 0;
+    border-radius: 4px;
+}
+
+.weekdays:first-child {
+    margin-left: 0;
+}
+
+.weekdays:last-child {
+    margin-right: 0;
+}
+
+.day {
+    font-weight: 500;
+    font-size: 1.375rem;
+}
+
+.weather-img {
+    width: 100px;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 50%;
+}
+
+.weather-descript {
+    font-size: .85rem;
+    /* margin: 5px 0; */
+}
+
+.temps {
+    width: 65%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 25px 0 20px;
+}
+
+.high {
+    color: red;
+}
+
+.low {
+    color: blue;
+}
+
+/* Cookie alert box */
+.cookies-alert {
+    width: 75%;
+    background-color: rgb(230, 230, 230);
+    margin-top: 1%;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: .75% 3% .75% 1.25%;
+    position: fixed;
+    bottom: 5%;
+    left: 12.5%;
+}
+
+.cookies-img {
+    width: 58px;
+    margin: 0 1%;
+}
+
+.cookies-txt {
+    padding: 0 1%;
+    margin: 0 1.25%;
+}
+
+.cookies-accept {
+    background-color: skyblue;
+    padding: 5% 1.5%;
+    width: 100px;
+    box-shadow: 3px 3px black;
+    font-weight: 500;
+    margin: 0 1%;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
